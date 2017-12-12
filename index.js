@@ -1,5 +1,8 @@
 module.exports = (publicKey) => {
-    let rt = require('socket.io-client')('http://postquick.startnet.co?key='+publicKey);
+    let rt = require('socket.io-client')('http://postquick.startnet.co?key='+publicKey, {
+        pingTimeout: 30000,
+        timeout: 30000
+    })
 
     return {
         on: (eventName, callback) => {
