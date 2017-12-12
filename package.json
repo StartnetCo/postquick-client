@@ -1,0 +1,22 @@
+{
+  "name": "postquick-client",
+  "version": "1.0.0",
+  "description": "postquick cliente for nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StartnetCo/postquick-client.git"
+  },
+  "author": "startnet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StartnetCo/postquick-client/issues"
+  },
+  "homepage": "https://github.com/StartnetCo/postquick-client#readme",
+  "dependencies": {
+    "socket.io-client": "^2.0.4"
+  }
+}
