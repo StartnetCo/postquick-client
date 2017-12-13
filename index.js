@@ -17,7 +17,7 @@ module.exports = (publicKey) => {
         removeListener: (eventName, callback) => {
             rt.removeListener(eventName, callback)
         },
-        pushSubscribe: (token, channels) => {
+        pushSubscribe: (token, channels, os) => {
             channels = Array.isArray(channels)?channels:[channels]
             os = os === 'android'?1:(os === 'ios'?2:3)
             rt.emit('_pushSubscribe', {
