@@ -1,5 +1,5 @@
-module.exports = (publicKey) => {
-    let rt = require('socket.io-client')('http://postquick.startnet.co?key='+publicKey, {
+module.exports = (publicKey, secure) => {
+    let rt = require('socket.io-client')('http'+(secure?'s':'')+'://postquick.startnet.co?key='+publicKey, {
         pingTimeout: 30000,
         timeout: 30000
     })
@@ -25,6 +25,10 @@ module.exports = (publicKey) => {
                 channels,
                 os
             })
+        },
+        pushSender: (callback) => {
+            rt.emit('_pushSender')
+            rt.on('_pushSender', callback||()=>{})
         }
     }
 }
