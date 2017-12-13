@@ -19,9 +19,11 @@ module.exports = (publicKey) => {
         },
         pushSubscribe: (token, channels) => {
             channels = Array.isArray(channels)?channels:[channels]
+            os = os === 'android'?1:(os === 'ios'?2:3)
             rt.emit('_pushSubscribe', {
                 token,
-                channels
+                channels,
+                os
             })
         }
     }

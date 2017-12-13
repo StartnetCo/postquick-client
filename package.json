@@ -1,6 +1,6 @@
 {
   "name": "postquick-client",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "postquick cliente for nodejs",
   "main": "index.js",
   "scripts": {
