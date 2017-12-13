@@ -28,7 +28,7 @@ module.exports = (publicKey, secure) => {
         },
         pushSender: (callback) => {
             rt.emit('_pushSender')
-            rt.on('_pushSender', callback||()=>{})
+            rt.on('_pushSender', callback)
         }
     }
 }
